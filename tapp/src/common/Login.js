@@ -34,11 +34,11 @@ export default class Login extends Component{
                 username:this.state.username,
                 pwd:this.state.pwd
             }).then(res=>{
-                if(res.data.judge==1){
+                if(res.data.lId==1){
                     console.log("222222222222222222222222222222");
                     this.setState({isloading:false})
                     ToastAndroid.show("未注册",ToastAndroid.SHORT);
-                }else if(res.data.judge==2){
+                }else if(res.data.lId==2){
                     this.setState({isloading:false})
                     ToastAndroid.show("登录失败",ToastAndroid.SHORT);
                 }else{
