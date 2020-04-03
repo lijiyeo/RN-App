@@ -20,9 +20,9 @@ export default class Login extends Component{
                 username:this.state.username,
                 pwd:this.state.pwd
             }).then(res=>{
-                if(res.data.judge==1){
+                if(res.data.lId==1){
                     ToastAndroid.show("用户名已存在",ToastAndroid.SHORT);
-                }else if(res.data.judge==2){
+                }else if(res.data.lId==2){
                     ToastAndroid.show("注册失败",ToastAndroid.SHORT);
                 }else{
                     AsyncStorage.setItem('user',JSON.stringify(res.data))
